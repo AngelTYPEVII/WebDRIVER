@@ -7,8 +7,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class MainTest {
     WebDriver driver;
     PageButtons pageButtons;
@@ -17,7 +15,6 @@ public class MainTest {
         System.setProperty("webdriver.chrome.driver","/home/timur/Документы/chromedriver");
         driver = new ChromeDriver();
         pageButtons=new PageButtons(driver);
-        driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/");
     }
